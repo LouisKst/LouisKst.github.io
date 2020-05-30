@@ -1,25 +1,38 @@
 var counter = 15;
 
-var downvote = false
+var downvot = false
 
-var upvote = false
+var upvot = false
 
 function upvote() {
-  if (false) {
-    counter  = counter + 1;
-    upvote = true
+  if (downvot === true) {
+    counter  = counter + 2;
+    upvot = true;
+    downvot = false;
     document.getElementById("votes").innerHTML = counter + " votes";
   } else {
-    counter  = counter - 1;
-    upvote = false
-    document.getElementById("votes").innerHTML = counter + " votes";
-  }
-
- document.getElementById("votes").innerHTML = counter + " votes";
+    if (upvote===false) {
+     counter  = counter + 1;
+     upvot = true;
+     document.getElementById("votes").innerHTML = counter + " votes";
+   } else {
+     ccounter  = counter - 1;
+     upvot = false;
+     document.getElementById("votes").innerHTML = counter + " votes";
+   }
 }
 
 function downvote() {
- counter  = counter - 1;
+  if (upvot === ) {
 
- document.getElementById("votes").innerHTML = counter + " votes";
+  }
+  if (downvot === false) {
+    counter  = counter - 1;
+    downvot = true;
+    document.getElementById("votes").innerHTML = counter + " votes";
+  } else {
+    counter  = counter + 1;
+    downvot = false;
+    document.getElementById("votes").innerHTML = counter + " votes";
+  }
 }
